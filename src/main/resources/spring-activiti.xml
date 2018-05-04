@@ -85,7 +85,9 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 	<bean id="processEngine" class="org.activiti.spring.ProcessEngineFactoryBean">
 		<property name="processEngineConfiguration" ref="processEngineConfiguration" />
 	</bean>
-	
+
+	<bean id="objectMapper" class="com.fasterxml.jackson.databind.ObjectMapper"/>
+
 	<!-- 配置注入一些服务 -->
 	<bean id="repositoryService" factory-bean="processEngine" factory-method="getRepositoryService"/>
 	<bean id="runtimeService" factory-bean="processEngine" factory-method="getRuntimeService"/>
